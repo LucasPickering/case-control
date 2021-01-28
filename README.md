@@ -85,6 +85,22 @@ If you change just a single component and want to avoid rebuilding all of them, 
 ./scripts/build_and_push.sh api display
 ```
 
+##### Errors
+
+If you see an error like this when you run `./scripts/build_and_push.sh`:
+
+```
+unknown target *
+```
+
+Then run:
+
+```sh
+docker buildx version
+```
+
+Make sure it is at least `v0.4.2`. If not, download and install the newest version from [here](https://github.com/docker/buildx/#installing).
+
 #### Deploy
 
 ##### First Time Setup
